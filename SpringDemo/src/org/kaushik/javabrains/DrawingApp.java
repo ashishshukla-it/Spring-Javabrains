@@ -20,3 +20,10 @@ public class DrawingApp {
 	}
 
 }
+
+/* 
+Output: 
+Point A: ( 10 ,11)
+Point B: ( 20 ,21)
+Point C: ( 30 ,31)
+*/

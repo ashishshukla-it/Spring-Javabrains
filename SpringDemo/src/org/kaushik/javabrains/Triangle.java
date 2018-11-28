@@ -2,32 +2,39 @@ package org.kaushik.javabrains;
 
 public class Triangle 
 {
-	
-	private String type;
-	private int height;
-
-	public int getHeight() 
-	{
-		return height;
-	}
-	public Triangle(String type)
+    Point pointA;
+    Point pointB;
+    Point pointC;
+    public void setPointA(Point pointA)
     {
-	    this.type=type;
+    	this.pointA=pointA;
     }
-
-    public Triangle(String type, int height) // 2 types of constructor are here. The one that matches with the format of xml is used
+    public void setPointB(Point pointB)
     {
-    	this.type=type;
-    	this.height=height;
+    	this.pointB=pointB;
     }
-	public String getType()
-	{
-		return type;
-	}
-	
+    public void setPointC(Point pointC)
+    {
+    	this.pointC=pointC;
+    }
+    public Point getPointA()
+    {
+    	return this.pointA;
+    }
+    public Point getPointB()
+    {
+    	return this.pointB;
+    }
+    public Point getPointC()
+    {
+    	return this.pointC;
+    }
 	public void draw()
 	{
-		System.out.println(getType() + " Triangle drawn of height " + getHeight());
+		System.out.println("Point A: ( "+getPointA().getX() + " ," + getPointA().getY()+ ")");
+		System.out.println("Point B: ( "+getPointB().getX() + " ," + getPointB().getY()+ ")");
+		System.out.println("Point C: ( "+getPointC().getX() + " ," + getPointC().getY()+ ")");
+		
 	}
 
 }

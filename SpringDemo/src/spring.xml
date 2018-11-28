@@ -2,9 +2,24 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
 <beans>
 <bean id="triangle" class="org.kaushik.javabrains.Triangle">
-<constructor-arg index="0" value="Equilateral">
-</constructor-arg> 
-<constructor-arg index="1" value="20">
-</constructor-arg> <!-- O/P: 20 Triangle drawn of height Equilateral  -->
+<property name="pointA" ref="pointA"></property>
+<property name="pointB" ref="pointB"></property>
+<property name="pointC" ref="pointC"></property>
 </bean>
+
+<bean id="pointA" class="org.kaushik.javabrains.Point">
+<property name="x" value="10"></property>
+<property name="y" value="11"></property>
+</bean>
+
+<bean id="pointB" class="org.kaushik.javabrains.Point">
+<property name="x" value="20"></property>
+<property name="y" value="21"></property>
+</bean>
+
+<bean id="pointC" class="org.kaushik.javabrains.Point">
+<property name="x" value="30"></property>
+<property name="y" value="31"></property>
+</bean>
+
 </beans>
