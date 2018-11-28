@@ -2,7 +2,8 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
 <beans>
 <bean id="triangle" class="org.kaushik.javabrains.Triangle">
-<property name="type" value="Equilateral">
-</property>
+<constructor-arg value=" Equilateral"></constructor-arg>
+<constructor-arg value="20"></constructor-arg> <!--  Here value is setted up as string but spring is smart and it converts it to integer where constructor is defined -->
+
 </bean>
 </beans>
