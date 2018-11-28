@@ -2,9 +2,9 @@ package org.kaushik.javabrains;
 
 public class Triangle 
 {
-	private int height;
-	private String type;
 	
+	private String type;
+	private int height;
 
 	public int getHeight() 
 	{
