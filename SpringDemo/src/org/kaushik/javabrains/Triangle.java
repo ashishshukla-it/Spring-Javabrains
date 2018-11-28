@@ -2,10 +2,15 @@ package org.kaushik.javabrains;
 
 public class Triangle 
 {
-	private String type;
 	private int height;
+	private String type;
+	
 
-    public Triangle(String type)
+	public int getHeight() 
+	{
+		return height;
+	}
+	public Triangle(String type)
     {
 	    this.type=type;
     }
@@ -19,10 +24,7 @@ public class Triangle
 	{
 		return type;
 	}
-	public int getHeight() 
-	{
-		return height;
-	}
+	
 	public void draw()
 	{
 		System.out.println(getType() + " Triangle drawn of height " + getHeight());
