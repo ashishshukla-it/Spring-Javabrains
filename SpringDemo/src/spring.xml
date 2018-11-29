@@ -3,8 +3,20 @@
 <beans>
 <bean id="triangle" class="org.kaushik.javabrains.Triangle">
 <property name="pointA" ref="pointA"></property>
-<property name="pointB" ref="pointB"></property>
-<property name="pointC" ref="pointC"></property>
+
+<property name="pointB" >
+<bean  class="org.kaushik.javabrains.Point">
+<property name="x" value="20"></property>
+<property name="y" value="21"></property>
+</bean>
+</property>
+
+<property name="pointC" >
+<bean id="pointC" class="org.kaushik.javabrains.Point">
+<property name="x" value="30"></property>
+<property name="y" value="31"></property>
+</bean>
+</property>
 </bean>
 
 <bean id="pointA" class="org.kaushik.javabrains.Point">
@@ -12,14 +24,6 @@
 <property name="y" value="11"></property>
 </bean>
 
-<bean id="pointB" class="org.kaushik.javabrains.Point">
-<property name="x" value="20"></property>
-<property name="y" value="21"></property>
-</bean>
-
-<bean id="pointC" class="org.kaushik.javabrains.Point">
-<property name="x" value="30"></property>
-<property name="y" value="31"></property>
-</bean>
-
+<!-- Separate bean should be created only when those values are to be used again and again. If the object is there only for a particular shape, then they can be kept inside innerbean -->
+<!-- Here we want that point A should be common for all shapes and B and C should only be there for triangle. Therefore B and C's bean have not been assigned any id as they will be instantiated only triangle object is called and triangle's bean has id -->
 </beans>
