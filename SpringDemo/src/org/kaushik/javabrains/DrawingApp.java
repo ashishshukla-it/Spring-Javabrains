@@ -14,8 +14,7 @@ public class DrawingApp {
 		// BeanFactory factory= new XmlBeanFactory(new FileSystemResource("spring.xml")); // XmlBeanFactory because here we will use xml configuration file 
 		ApplicationContext context=new ClassPathXmlApplicationContext("spring.xml"); // ApplicationContext can do everything that bean factory does, along with that it has some extra advantages and has same weight
 		// Both line 17 and 18 will yield same result
-		// Triangle triangle=(Triangle) context.getBean("triangle-name");
-		Triangle triangle=(Triangle) context.getBean("triangle-alias");
+		Triangle triangle=(Triangle) context.getBean("triangle");
 		triangle.draw();
 		
 
@@ -25,7 +24,7 @@ public class DrawingApp {
 
 /* 
 Output: 
-Point A: ( 10 ,11)
-Point B: ( 20 ,21)
-Point C: ( 30 ,31)
+Point : ( 0 ,1)
+Point : ( 20 ,21)
+Point : ( 30 ,31)
 */
