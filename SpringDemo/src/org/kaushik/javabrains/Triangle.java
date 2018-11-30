@@ -3,24 +3,44 @@ import java.util.List;
 
 public class Triangle 
 {
-    private List<Point> points;
+    private Point pointA;
+    private Point pointB;
+    private Point pointC;
     
-    public List<Point> getPoints()
+    public Point getPointA()
     {
-    	return this.points;
+    	return this.pointA;
     }
     
-    public void setPoints(List<Point> points)
+    public void setPointA(Point pointA)
     {
-    	this.points=points;
+    	this.pointA=pointA;
+    }
+    
+    public Point getPointB()
+    {
+    	return this.pointB;
+    }
+    
+    public void setPointB(Point pointB)
+    {
+    	this.pointB=pointB;
+    }
+    
+    public Point getPointC()
+    {
+    	return this.pointC;
+    }
+    
+    public void setPointC(Point pointC)
+    {
+    	this.pointC=pointC;
     }
 	public void draw()
 	{
-		for(Point i:points)
-		{
-			System.out.println("Point : ( "+i.getX() + " ," + i.getY()+ ")");
-		}
-		
+		System.out.println("PointA : ( "+getPointA().getX() + " ," + getPointA().getY()+ ")");
+		System.out.println("PointB : ( "+getPointB().getX() + " ," + getPointB().getY()+ ")");
+		System.out.println("PointC : ( "+getPointC().getX() + " ," + getPointC().getY()+ ")");
 		
 		
 	}
