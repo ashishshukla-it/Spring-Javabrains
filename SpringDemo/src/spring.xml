@@ -2,10 +2,17 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
 <beans>
 
-<bean id="triangle" class="org.kaushik.javabrains.Triangle" autowire="byName">
-<!-- Here we autowiring on the basis of name. So, in Triangle, all the variables will be compared with the bean id and when matched, they will be mapped -->
-<!--  byType can be used only when there is only one bean of point and in triangle, there is only one point declared. Mapping is done on the basis of class. Here in this case, byType cannot be used   -->
-<!--  Another autowire type is "constructor". Just like byType, this also require one bean per type. It initializes constructor -->
+<bean id="Parenttriangle" class="org.kaushik.javabrains.Triangle">
+<property name="pointA" ref="pointA"></property>
+</bean>
+
+<bean id="triangle1" class="org.kaushik.javabrains.Triangle" parent="Parenttriangle">
+<property name="pointB" ref="pointB"></property>
+<property name="pointC" ref="pointC"></property>
+</bean>
+
+<bean id="triangle2" class="org.kaushik.javabrains.Triangle" parent="Parenttriangle">
+<property name="pointB" ref="pointB"></property>
 </bean>
 
 <bean id="pointA" class="org.kaushik.javabrains.Point">

@@ -11,8 +11,10 @@ public class DrawingApp {
 
 	public static void main(String[] args) {
 		ApplicationContext context=new ClassPathXmlApplicationContext("spring.xml"); 
-	    Triangle triangle=(Triangle) context.getBean("triangle");
+	    Triangle triangle=(Triangle) context.getBean("triangle1");
+	    Triangle newtriangle=(Triangle) context.getBean("triangle2");
 		triangle.draw();
+		newtriangle.draw();
 		
 
 	}
@@ -21,10 +23,14 @@ public class DrawingApp {
 
 /* 
 Output: 
-Bean name is :triangle
+Bean name is :Parenttriangle
+Bean name is :triangle1
+Bean name is :triangle2
 PointA : ( 0 ,1)
 PointB : ( 20 ,21)
 PointC : ( 30 ,31)
+PointA : ( 0 ,1)
+PointB : ( 20 ,21)
+Exception in thread "main" java.lang.NullPointerException
 
-Note that "Bean name is :triangle" is appearing first. This is because when beans were created, then only their setters were called.
 */
