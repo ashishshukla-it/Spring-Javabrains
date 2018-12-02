@@ -10,7 +10,7 @@ import org.springframework.core.io.FileSystemResource;
 public class DrawingApp {
 
 	public static void main(String[] args) {
-		ApplicationContext context=new ClassPathXmlApplicationContext("spring.xml"); // ApplicationContext can do everything that bean factory does, along with that it has some extra advantages and has same weight
+		ApplicationContext context=new ClassPathXmlApplicationContext("spring.xml"); 
 	    Triangle triangle=(Triangle) context.getBean("triangle");
 		triangle.draw();
 		
@@ -21,7 +21,10 @@ public class DrawingApp {
 
 /* 
 Output: 
-Point : ( 0 ,1)
-Point : ( 20 ,21)
-Point : ( 30 ,31)
+Bean name is :triangle
+PointA : ( 0 ,1)
+PointB : ( 20 ,21)
+PointC : ( 30 ,31)
+
+Note that "Bean name is :triangle" is appearing first. This is because when beans were created, then only their setters were called.
 */
