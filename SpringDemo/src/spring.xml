@@ -2,7 +2,7 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
 <beans>
 
-<bean id="triangle" class="org.kaushik.javabrains.Triangle">
+<bean id="triangle" class="org.kaushik.javabrains.Triangle" init-method="MyInit" destroy-method="MyDestroy">
 <property name="pointA" ref="pointA"></property>
 <property name="pointB" ref="pointB"></property>
 <property name="pointC" ref="pointC"></property>
