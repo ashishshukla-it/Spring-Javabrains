@@ -2,26 +2,10 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
 <beans>
 
-<bean id="Parenttriangle" class="org.kaushik.javabrains.Triangle" abstract="true">
-<!--  When abstarct is used, its bean is not created and it is used as template for other beans -->
-<property name="pointA">
-<list>
-<ref bean="pointA"></ref>
-</list>
-</property>
-</bean>
-
-<bean id="triangle1" class="org.kaushik.javabrains.Triangle" parent="Parenttriangle">
-<property name="pointB">
-<list merge="true">
-<!-- If merge is not used, then pointB will overwrite pointA  -->
-<ref bean="pointB"></ref>
-</list>
-</property>
-</bean>
-
-<bean id="triangle2" class="org.kaushik.javabrains.Triangle" parent="Parenttriangle">
+<bean id="triangle" class="org.kaushik.javabrains.Triangle">
+<property name="pointA" ref="pointA"></property>
 <property name="pointB" ref="pointB"></property>
+<property name="pointC" ref="pointC"></property>
 </bean>
 
 <bean id="pointA" class="org.kaushik.javabrains.Point">
