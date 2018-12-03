@@ -23,9 +23,13 @@ public class DrawingApp {
 
 /* 
 Output: 
+InitializingBean init method called for triangle
 MyInit() method called for triangle
 PointA : ( 0 ,1)
 PointB : ( 20 ,21)
 PointC : ( 30 ,31)
+DisposableBean destroy method called for triangle
 MyDestroy() method called for triangle
 */
+
+// This is to show the order in which inbuilt and customized methods have been executed

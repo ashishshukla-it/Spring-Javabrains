@@ -8,7 +8,7 @@ import org.springframework.beans.factory.InitializingBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
-public class Triangle
+public class Triangle implements InitializingBean, DisposableBean
 {
     private List<Point> points;
 	private Point pointA;
@@ -64,19 +64,19 @@ public class Triangle
 		
 	}
 
-//	@Override
-//	public void afterPropertiesSet() throws Exception {
-//		// TODO Auto-generated method stub
-//		System.out.println("InitializingBean init method called for triangle");
-//		
-//	}
-//
-//	@Override
-//	public void destroy() throws Exception {
-//		// TODO Auto-generated method stub
-//		System.out.println("DisposableBean destroy method called for triangle");
-//		
-//	}
+	@Override
+	public void afterPropertiesSet() throws Exception {
+		// TODO Auto-generated method stub
+		System.out.println("InitializingBean init method called for triangle");
+		
+	}
+
+	@Override
+	public void destroy() throws Exception {
+		// TODO Auto-generated method stub
+		System.out.println("DisposableBean destroy method called for triangle");
+		
+	}
 	
 	public void MyInit()
 	{
