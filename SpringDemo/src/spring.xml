@@ -24,4 +24,7 @@
 <property name="y" value="31"></property>
 </bean>
 
+<bean class="org.kaushik.javabrains.DisplayNameBeanPostProcessor">
+</bean>
+
 </beans>

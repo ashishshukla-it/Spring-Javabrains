@@ -23,13 +23,17 @@ public class DrawingApp {
 
 /* 
 Output: 
-InitializingBean init method called for triangle
-MyInit() method called for triangle
+In before initialization method. Bean name is- pointA
+In after initialization method. Bean name is- pointA
+In before initialization method. Bean name is- pointB
+In after initialization method. Bean name is- pointB
+In before initialization method. Bean name is- pointC
+In after initialization method. Bean name is- pointC
+In before initialization method. Bean name is- triangle
+In after initialization method. Bean name is- triangle
 PointA : ( 0 ,1)
 PointB : ( 20 ,21)
 PointC : ( 30 ,31)
-DisposableBean destroy method called for triangle
-MyDestroy() method called for triangle
 */
 
-// This is to show the order in which inbuilt and customized methods have been executed
+// bean post process- Those processes that has to be done after the bean has been initialized
