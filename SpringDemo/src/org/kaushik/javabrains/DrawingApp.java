@@ -23,17 +23,12 @@ public class DrawingApp {
 
 /* 
 Output: 
-In before initialization method. Bean name is- pointA
-In after initialization method. Bean name is- pointA
-In before initialization method. Bean name is- pointB
-In after initialization method. Bean name is- pointB
-In before initialization method. Bean name is- pointC
-In after initialization method. Bean name is- pointC
-In before initialization method. Bean name is- triangle
-In after initialization method. Bean name is- triangle
+My bean factory post processor called
 PointA : ( 0 ,1)
 PointB : ( 20 ,21)
 PointC : ( 30 ,31)
 */
 
-// bean post process- Those processes that has to be done after the bean has been initialized
+/*
+ BeanFactoryPostProcessor operates on bean definition i.e. before the bean instance is getting created it gets executed and BeanPostProcessor gets executed after bean is instantiated and lifecycle events are called.
+ */ 

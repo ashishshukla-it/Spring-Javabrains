@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
-<beans default-init-method="MyInit" default-destroy-method="MyDestroy">
-<!-- If we want that init and destroy should take place for all the beans, then we have to declare it in beans -->
+<beans>
 
 <bean id="triangle" class="org.kaushik.javabrains.Triangle" >
 <property name="pointA" ref="pointA"></property>
@@ -10,8 +9,8 @@
 </bean>
 
 <bean id="pointA" class="org.kaushik.javabrains.Point">
-<property name="x" value="0"></property>
-<property name="y" value="1"></property>
+<property name="x" value="${pointA.pointX}"></property>
+<property name="y" value="${pointA.pointY}"></property>
 </bean>
 
 <bean id="pointB"  class="org.kaushik.javabrains.Point">
@@ -24,7 +23,11 @@
 <property name="y" value="31"></property>
 </bean>
 
-<bean class="org.kaushik.javabrains.DisplayNameBeanPostProcessor">
+<bean class="org.kaushik.javabrains.MyBeanFactoryPP">
+</bean>
+
+<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+<property name="locations" value="pointsconfig.properties"></property>
 </bean>
 
 </beans>
