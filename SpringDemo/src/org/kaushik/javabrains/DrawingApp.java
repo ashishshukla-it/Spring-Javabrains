@@ -13,8 +13,8 @@ public class DrawingApp {
 	public static void main(String[] args) {
 		AbstractApplicationContext context=new ClassPathXmlApplicationContext("spring.xml"); 
 	    context.registerShutdownHook();
-		Triangle triangle=(Triangle) context.getBean("triangle");
-		triangle.draw();
+		Shape shape=(Shape) context.getBean("circle");
+		shape.draw();
 		
 
 	}
@@ -23,12 +23,7 @@ public class DrawingApp {
 
 /* 
 Output: 
-My bean factory post processor called
-PointA : ( 0 ,1)
-PointB : ( 20 ,21)
-PointC : ( 30 ,31)
+
 */
 
-/*
- BeanFactoryPostProcessor operates on bean definition i.e. before the bean instance is getting created it gets executed and BeanPostProcessor gets executed after bean is instantiated and lifecycle events are called.
- */ 
+ 
