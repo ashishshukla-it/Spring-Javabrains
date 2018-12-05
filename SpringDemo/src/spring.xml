@@ -24,8 +24,14 @@
 </bean>
 
 <bean id="circle" class="org.kaushik.javabrains.Circle">
-<property name="center" ref="pointA">
-</property>
+<!-- 
+<property name="center" ref="pointA"> 
+</property> 
+-->
+</bean>
+
+<!-- This has method that gets executed on each of the bean and will check for annotation on all concerned classes -->
+<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor">
 </bean>
 
 </beans>
