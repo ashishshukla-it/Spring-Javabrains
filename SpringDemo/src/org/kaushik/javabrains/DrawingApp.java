@@ -26,10 +26,11 @@ Drawing circle
 ( 0,0)
 */
 
-/* Now if we reenter beans of pointB and pointC and then again rerun the code, then error will get generated.
- * This is because autowire is unable to resovle, which bean to be used.
- * So we are changing the name of bean from "pointA" to "center". 
- * Now since in circle class, name of object is center, autowire is able to guess that this must be the bean that is required.
+/* Again change name of bean from "center" to "pointA". 
+ * Autowire will first check beans on the basis of type but there are multiple beans with same type.
+ * Then it will check with bean name and now this will also not match.
+ * So now we are using Qualifier annotation. Now matching will be done on the basis of Qualifier name (circleRelated is qualifier name in this case).
+ * For using qualifier, we have to remove previous doctype and will have to enter new namespace with opening beans tag.
  */
 
 

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
-<beans>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
+	xmlns:context="http://www.springframework.org/schema/context">
 
 <!-- <bean id="triangle" class="org.kaushik.javabrains.Triangle" >
 <property name="pointA" ref="pointA"></property>
@@ -8,7 +12,8 @@
 <property name="pointC" ref="pointC"></property>
 </bean> -->
 
-<bean id="center" class="org.kaushik.javabrains.Point">
+<bean id="pointA" class="org.kaushik.javabrains.Point">
+<qualifier value="circleRelated" />
 <property name="x" value="0"></property>
 <property name="y" value="0"></property>
 </bean>
@@ -26,7 +31,7 @@
 <bean id="circle" class="org.kaushik.javabrains.Circle">
 </bean>
 
-<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor">
-</bean>
+<!-- This is a shortcut. With the help of this, we don't have to enter post processors. -->
+<context:annotation-config/>
 
 </beans>
