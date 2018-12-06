@@ -21,18 +21,14 @@ public class DrawingApp {
 }
 
 /* 
-We want that there should be a validation while bean is initialized and if some thing is wrong then we should get error there only.
-This is done by required annotation.
-Here we have put required in setCenter() of circle so if there is no center at the time of circle bean initialization, then error will occur there itself.
 Output:
-Error during bean initialization (org.springframework.beans.factory.BeanCreationException)
-
+Drawing circle
+( 0,0)
 */
 
-
-/* If we just delete property of circle in xml, then null pointer exception will occur after bean is called.
- * Output:
- * Drawing circle
-java.lang.NullPointerException
+/* In this case, we have deleted all other beans except that of circle. So, autowire will pick up that.
  */
+
+
+
  

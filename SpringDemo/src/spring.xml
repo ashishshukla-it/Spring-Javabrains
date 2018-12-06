@@ -2,18 +2,18 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
 <beans>
 
-<bean id="triangle" class="org.kaushik.javabrains.Triangle" >
+<!-- <bean id="triangle" class="org.kaushik.javabrains.Triangle" >
 <property name="pointA" ref="pointA"></property>
 <property name="pointB" ref="pointB"></property>
 <property name="pointC" ref="pointC"></property>
-</bean>
+</bean> -->
 
 <bean id="pointA" class="org.kaushik.javabrains.Point">
 <property name="x" value="0"></property>
 <property name="y" value="0"></property>
 </bean>
 
-<bean id="pointB"  class="org.kaushik.javabrains.Point">
+<!-- <bean id="pointB"  class="org.kaushik.javabrains.Point">
 <property name="x" value="20"></property>
 <property name="y" value="21"></property>
 </bean>
@@ -21,17 +21,14 @@
 <bean id="pointC" class="org.kaushik.javabrains.Point">
 <property name="x" value="30"></property>
 <property name="y" value="31"></property>
-</bean>
+</bean> -->
 
 <bean id="circle" class="org.kaushik.javabrains.Circle">
-<!-- 
 <property name="center" ref="pointA"> 
 </property> 
--->
 </bean>
 
-<!-- This has method that gets executed on each of the bean and will check for annotation on all concerned classes -->
-<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor">
+<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor">
 </bean>
 
 </beans>
