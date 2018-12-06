@@ -26,7 +26,10 @@ Drawing circle
 ( 0,0)
 */
 
-/* In this case, we have deleted all other beans except that of circle. So, autowire will pick up that.
+/* Now if we reenter beans of pointB and pointC and then again rerun the code, then error will get generated.
+ * This is because autowire is unable to resovle, which bean to be used.
+ * So we are changing the name of bean from "pointA" to "center". 
+ * Now since in circle class, name of object is center, autowire is able to guess that this must be the bean that is required.
  */
 
 

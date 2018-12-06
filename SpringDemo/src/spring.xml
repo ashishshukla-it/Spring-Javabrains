@@ -8,12 +8,12 @@
 <property name="pointC" ref="pointC"></property>
 </bean> -->
 
-<bean id="pointA" class="org.kaushik.javabrains.Point">
+<bean id="center" class="org.kaushik.javabrains.Point">
 <property name="x" value="0"></property>
 <property name="y" value="0"></property>
 </bean>
 
-<!-- <bean id="pointB"  class="org.kaushik.javabrains.Point">
+<bean id="pointB"  class="org.kaushik.javabrains.Point">
 <property name="x" value="20"></property>
 <property name="y" value="21"></property>
 </bean>
@@ -21,11 +21,9 @@
 <bean id="pointC" class="org.kaushik.javabrains.Point">
 <property name="x" value="30"></property>
 <property name="y" value="31"></property>
-</bean> -->
+</bean>
 
 <bean id="circle" class="org.kaushik.javabrains.Circle">
-<property name="center" ref="pointA"> 
-</property> 
 </bean>
 
 <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor">
