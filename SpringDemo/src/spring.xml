@@ -6,11 +6,11 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
 	xmlns:context="http://www.springframework.org/schema/context">
 
-<!-- <bean id="triangle" class="org.kaushik.javabrains.Triangle" >
+<bean id="triangle" class="org.kaushik.javabrains.Triangle" >
 <property name="pointA" ref="pointA"></property>
 <property name="pointB" ref="pointB"></property>
 <property name="pointC" ref="pointC"></property>
-</bean> -->
+</bean>
 
 <bean id="pointA" class="org.kaushik.javabrains.Point">
 <qualifier value="circleRelated" />
@@ -31,7 +31,6 @@
 <bean id="circle" class="org.kaushik.javabrains.Circle">
 </bean>
 
-<!-- This is a shortcut. With the help of this, we don't have to enter post processors. -->
 <context:annotation-config/>
 
 </beans>

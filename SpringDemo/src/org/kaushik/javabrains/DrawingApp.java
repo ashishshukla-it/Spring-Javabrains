@@ -17,20 +17,17 @@ public class DrawingApp {
 		Shape shape=(Shape) context.getBean("circle");
 		shape.draw();
 	}
-
 }
 
 /* 
 Output:
 Drawing circle
-( 0,0)
+( 30,31)
 */
 
-/* Again change name of bean from "center" to "pointA". 
- * Autowire will first check beans on the basis of type but there are multiple beans with same type.
- * Then it will check with bean name and now this will also not match.
- * So now we are using Qualifier annotation. Now matching will be done on the basis of Qualifier name (circleRelated is qualifier name in this case).
- * For using qualifier, we have to remove previous doctype and will have to enter new namespace with opening beans tag.
+/* JSR- Java Specification Request
+ * JSR 250, as a Java Specification Request, has the objective to define a set of annotations that address common semantic concepts and therefore can be used by many Java EE and Java SE components.
+ * This is to avoid redundant annotations across those components.
  */
 
 
