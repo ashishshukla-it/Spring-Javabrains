@@ -9,7 +9,7 @@
 <bean id="triangle" class="org.kaushik.javabrains.Triangle" >
 <property name="pointA" ref="pointA"></property>
 <property name="pointB" ref="pointB"></property>
-<property name="pointC" ref="pointC"></property>
+<property name="pointC" ref="center"></property>
 </bean>
 
 <bean id="pointA" class="org.kaushik.javabrains.Point">
@@ -23,7 +23,7 @@
 <property name="y" value="21"></property>
 </bean>
 
-<bean id="pointC" class="org.kaushik.javabrains.Point">
+<bean id="center" class="org.kaushik.javabrains.Point">
 <property name="x" value="30"></property>
 <property name="y" value="31"></property>
 </bean>

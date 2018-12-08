@@ -28,6 +28,7 @@ Drawing circle
 /* JSR- Java Specification Request
  * JSR 250, as a Java Specification Request, has the objective to define a set of annotations that address common semantic concepts and therefore can be used by many Java EE and Java SE components.
  * This is to avoid redundant annotations across those components.
+ * If the name of the object to be initialized is same as that of the bean name, then we don't have to give name to resource.
  */
 
 

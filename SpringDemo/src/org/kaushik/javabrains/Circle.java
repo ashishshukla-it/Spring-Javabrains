@@ -10,7 +10,7 @@ public class Circle implements Shape{
 	private Point center;
 	
 	//Resource is not specific to spring.
-	@Resource(name="pointC")
+	@Resource
 	public void setCenter(Point center)
 	{
 		this.center=center;
