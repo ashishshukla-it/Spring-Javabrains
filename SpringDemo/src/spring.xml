@@ -28,9 +28,6 @@
 <property name="y" value="31"></property>
 </bean>
 
-<bean id="circle" class="org.kaushik.javabrains.Circle">
-</bean>
-
 <context:annotation-config/>
-
+<context:component-scan base-package="org.kaushik.javabrains" />
 </beans>

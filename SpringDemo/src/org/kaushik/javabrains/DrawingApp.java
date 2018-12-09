@@ -30,10 +30,15 @@ INFO: Closing org.springframework.context.support.ClassPathXmlApplicationContext
 Destroy of circle
 */
 
-/* JSR- Java Specification Request
- * JSR 250, as a Java Specification Request, has the objective to define a set of annotations that address common semantic concepts and therefore can be used by many Java EE and Java SE components.
- * This is to avoid redundant annotations across those components.
- * registerShutdownHook() is required for execution of postDestroy. 
+/* Component annotation above the class declaration tells spring that this class is a bean.
+ * Then in xml, we don't have to create a bean for that class.
+ * But this has a limitation.
+ * We can do so only for those classes for which only one bean has to created.
+ * For example, in point class, there are multiple beans being created for it in xml. So we cannot use @Component for Point class.
+ * Also we have add '<context:component-scan base-package="org.kaushik.javabrains" />'. 
+ * This tells spring to scan all the classes in the mentioned package to check whether any of them has @Component so that can be used as bean.
+ * Apart from @Component, we can also use @Repository, @Controller or @Service.
+ * Actually these all are stereotypes that gives spring an additional information that for what purpose these are.
  */
 
 
