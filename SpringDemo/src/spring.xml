@@ -28,6 +28,8 @@
 <property name="y" value="31"></property>
 </bean>
 
+<!--  This messageSource is the reserved keyword. 
+messageSource is implementing an interface called MessageSource and getMessage() is a method of it -->
 <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
 <property name="basenames">
 <list>

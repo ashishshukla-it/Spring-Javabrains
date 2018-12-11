@@ -16,8 +16,6 @@ public class DrawingApp {
 	    context.registerShutdownHook();
 		Shape shape=(Shape) context.getBean("circle");
 		shape.draw();
-		System.out.println(context.getMessage("greeting",null,"Deafault greeting",null));
-		// (name of the property, parameters for the message, Default message if property of given name is not found, locale for which we need the message)
 	}
 }
 
@@ -30,9 +28,11 @@ hello
 Destroy of circle
 */
 
-/* Sometimes we want several messages to be displayed in different parts of our application.
- * It won't look nice if all messages are written in middle of our code.
- * So we create a separate file for it.
+/* Things done in previous code can be done in other ways as well.
+ * We are trying to put the message in the bean (circle bean in this case).
+ * (This can be done by previous method as well).
+ * 
+ * 
  */
 
 
