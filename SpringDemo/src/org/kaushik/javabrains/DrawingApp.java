@@ -14,9 +14,10 @@ public class DrawingApp {
 	{
 		AbstractApplicationContext context=new ClassPathXmlApplicationContext("spring.xml"); 
 	    context.registerShutdownHook();
-		context.registerShutdownHook();
 		Shape shape=(Shape) context.getBean("circle");
 		shape.draw();
+		System.out.println(context.getMessage("greeting",null,"Deafault greeting",null));
+		// (name of the property, parameters for the message, Default message if property of given name is not found, locale for which we need the message)
 	}
 }
 
@@ -25,20 +26,13 @@ Output:
 Init of circle
 Drawing circle
 ( 30,31)
-Dec 08, 2018 1:13:57 PM org.springframework.context.support.ClassPathXmlApplicationContext doClose
-INFO: Closing org.springframework.context.support.ClassPathXmlApplicationContext@4534b60d: startup date [Sat Dec 08 13:13:57 IST 2018]; root of context hierarchy
+hello
 Destroy of circle
 */
 
-/* Component annotation above the class declaration tells spring that this class is a bean.
- * Then in xml, we don't have to create a bean for that class.
- * But this has a limitation.
- * We can do so only for those classes for which only one bean has to created.
- * For example, in point class, there are multiple beans being created for it in xml. So we cannot use @Component for Point class.
- * Also we have add '<context:component-scan base-package="org.kaushik.javabrains" />'. 
- * This tells spring to scan all the classes in the mentioned package to check whether any of them has @Component so that can be used as bean.
- * Apart from @Component, we can also use @Repository, @Controller or @Service.
- * Actually these all are stereotypes that gives spring an additional information that for what purpose these are.
+/* Sometimes we want several messages to be displayed in different parts of our application.
+ * It won't look nice if all messages are written in middle of our code.
+ * So we create a separate file for it.
  */
 
 
