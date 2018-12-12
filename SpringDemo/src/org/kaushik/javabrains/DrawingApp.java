@@ -22,17 +22,12 @@ public class DrawingApp {
 /* 
 Output:
 Init of circle
-Drawing circle
-( 30,31)
-hello
+Drawing cirlce
+Circle: point is (30,31)
 Destroy of circle
 */
 
-/* Things done in previous code can be done in other ways as well.
- * We are trying to put the message in the bean (circle bean in this case).
- * (This can be done by previous method as well).
- * 
- * 
+/* Here we are seeing how to pass parameter in getMessage()
  */
 
 
