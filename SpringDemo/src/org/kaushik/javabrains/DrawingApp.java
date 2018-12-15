@@ -22,18 +22,20 @@ public class DrawingApp {
 /* 
 Output:
 Init of circle
-org.springframework.context.event.ContextRefreshedEvent[source=org.springframework.context.support.ClassPathXmlApplicationContext@4534b60d: startup date [Sat Dec 15 10:17:16 IST 2018]; root of context hierarchy]
+org.springframework.context.event.ContextRefreshedEvent[source=org.springframework.context.support.ClassPathXmlApplicationContext@4534b60d: startup date [Sat Dec 15 19:20:50 IST 2018]; root of context hierarchy]
 Drawing cirlce
 Circle: point is (30,31)
-org.springframework.context.event.ContextClosedEvent[source=org.springframework.context.support.ClassPathXmlApplicationContext@4534b60d: startup date [Sat Dec 15 10:17:16 IST 2018]; root of context hierarchy]
+Draw event occured
+org.springframework.context.event.ContextClosedEvent[source=org.springframework.context.support.ClassPathXmlApplicationContext@4534b60d: startup date [Sat Dec 15 19:20:50 IST 2018]; root of context hierarchy]
 Destroy of circle
 */
 
 /* ApplicationContext provides another feature called event handling. It has 3 core elements-
- * Event publisher, event listener, event
- * onApplicationEvent() of MyEventListener will list out all the events related to framework.
+ * Event publisher (The publisher constructs the event object and publishes it to anyone who’s listening.),
+ * event listener, event
+ * Here we are trying to publish our own event (drawEvent) and then we will publish it in one of our bean (Circle).
+ * When 'publisher.publishEvent(drawEvent);' is executed, command goes to 'MyEventListener'.
+ * 'onApplicationEvent()' takes drawEvent as parameter and our customed toString() method gets executed.
  */
 
 
-
- 
