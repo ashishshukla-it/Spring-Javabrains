@@ -22,12 +22,16 @@ public class DrawingApp {
 /* 
 Output:
 Init of circle
+org.springframework.context.event.ContextRefreshedEvent[source=org.springframework.context.support.ClassPathXmlApplicationContext@4534b60d: startup date [Sat Dec 15 10:17:16 IST 2018]; root of context hierarchy]
 Drawing cirlce
 Circle: point is (30,31)
+org.springframework.context.event.ContextClosedEvent[source=org.springframework.context.support.ClassPathXmlApplicationContext@4534b60d: startup date [Sat Dec 15 10:17:16 IST 2018]; root of context hierarchy]
 Destroy of circle
 */
 
-/* Here we are seeing how to pass parameter in getMessage()
+/* ApplicationContext provides another feature called event handling. It has 3 core elements-
+ * Event publisher, event listener, event
+ * onApplicationEvent() of MyEventListener will list out all the events related to framework.
  */
 
 
